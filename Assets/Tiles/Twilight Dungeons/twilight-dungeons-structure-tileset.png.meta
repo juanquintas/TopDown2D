@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: b65fef5f8da4ae94e88e24109caa44ca
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1192
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52451c7727a29bc4da63095bb7b307f3
+      internalID: 1937916777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1190
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3138dcb5524ba40a0c1c891a5688cf
+      internalID: -2095082229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1189
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8484dbdf563d504293c757b14fa02ca
+      internalID: 2056325415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1189
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0517b2987f8f9540ae090149b1237c4
+      internalID: 980294176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1055
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683aa2a98a0de19479f74d036b9d6f0a
+      internalID: 1763773523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1055
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a786529a9034e0745b84d351f668e391
+      internalID: -1011064787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1055
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744ed5ef326328f45b6723738f07bd9d
+      internalID: -1131432463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1055
+        width: 256
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef652ffc7b950c4a90f2e85ecb137c5
+      internalID: -125386392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 819
+        width: 157
+        height: 205
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aaccacaeabb4c049b20cf467530f41b
+      internalID: 1509857067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 819
+        width: 158
+        height: 203
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee8056d104bd43428f294ca1d6f0305
+      internalID: -614936947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_10
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 816
+        width: 160
+        height: 206
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a2b6ba4f639ad4387a250ea96d07ba
+      internalID: -1489675507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_11
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 818
+        width: 161
+        height: 206
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90713e99fb8d91143979e2f0a5eca4aa
+      internalID: 1820405959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_16
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 558
+        width: 157
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cfaa50638ee824f92d7e9479081de9
+      internalID: 613261863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_17
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 560
+        width: 161
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932434d3ab6eac442a3d871f59e7d166
+      internalID: 788192168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_18
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 556
+        width: 151
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1c7fac61c6b8a4598bd5fb4b135b85
+      internalID: -1891444916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_19
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 560
+        width: 149
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d085663158c749547b153632cb962a31
+      internalID: 69233075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 267
+        width: 139
+        height: 254
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f26146fc3abc74db1b177e14c9e6b4
+      internalID: -1255254600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 326
+        width: 256
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcbfb77af1d0ae4d8629b3f9ae452bc
+      internalID: -2062215203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 265
+        width: 259
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbbad9a0ac1bd3428c9dd7a9c2540e0
+      internalID: -1018086789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_27
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 264
+        width: 139
+        height: 259
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f47d4a01a15ac48bc371a40300bc5f
+      internalID: 7808812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_32
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 33
+        width: 140
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fce763cac9b07e4bb02b83ab2f7d60a
+      internalID: -402113826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_33
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 33
+        width: 140
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -70, y: 96.5}
+        - {x: -70, y: -39.5}
+        - {x: -46, y: -80.5}
+        - {x: 29, y: -96.5}
+        - {x: 70, y: -96.5}
+        - {x: 70, y: 37.5}
+        - {x: -43, y: 96.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642dd752e8d70534dbf7bed7bd7a262b
+      internalID: -869936446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_34
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 33
+        width: 139
+        height: 194
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7052ffbdb51402d4da4d550f03c35732
+      internalID: 61894137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: twilight-dungeons-structure-tileset_35
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 32
+        width: 140
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ca83d7057b7664ba8758b02f576de2
+      internalID: 1556325153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      twilight-dungeons-structure-tileset_0: 1937916777
+      twilight-dungeons-structure-tileset_1: -2095082229
+      twilight-dungeons-structure-tileset_10: -1489675507
+      twilight-dungeons-structure-tileset_11: 1820405959
+      twilight-dungeons-structure-tileset_12: 258123543
+      twilight-dungeons-structure-tileset_13: 555791759
+      twilight-dungeons-structure-tileset_14: -1159092474
+      twilight-dungeons-structure-tileset_15: -1613333973
+      twilight-dungeons-structure-tileset_16: 613261863
+      twilight-dungeons-structure-tileset_17: 788192168
+      twilight-dungeons-structure-tileset_18: -1891444916
+      twilight-dungeons-structure-tileset_19: 69233075
+      twilight-dungeons-structure-tileset_2: 2056325415
+      twilight-dungeons-structure-tileset_20: -153315012
+      twilight-dungeons-structure-tileset_21: -1770013611
+      twilight-dungeons-structure-tileset_22: 1446990958
+      twilight-dungeons-structure-tileset_23: -666045912
+      twilight-dungeons-structure-tileset_24: -1255254600
+      twilight-dungeons-structure-tileset_25: -2062215203
+      twilight-dungeons-structure-tileset_26: -1018086789
+      twilight-dungeons-structure-tileset_27: 7808812
+      twilight-dungeons-structure-tileset_28: 1773212962
+      twilight-dungeons-structure-tileset_29: 1727397915
+      twilight-dungeons-structure-tileset_3: 980294176
+      twilight-dungeons-structure-tileset_30: -950714781
+      twilight-dungeons-structure-tileset_31: 1084310098
+      twilight-dungeons-structure-tileset_32: -402113826
+      twilight-dungeons-structure-tileset_33: -869936446
+      twilight-dungeons-structure-tileset_34: 61894137
+      twilight-dungeons-structure-tileset_35: 1556325153
+      twilight-dungeons-structure-tileset_36: -1607065528
+      twilight-dungeons-structure-tileset_37: -1880328124
+      twilight-dungeons-structure-tileset_38: 758986689
+      twilight-dungeons-structure-tileset_39: -1483143480
+      twilight-dungeons-structure-tileset_4: 1763773523
+      twilight-dungeons-structure-tileset_5: -1011064787
+      twilight-dungeons-structure-tileset_6: -1131432463
+      twilight-dungeons-structure-tileset_7: -125386392
+      twilight-dungeons-structure-tileset_8: 1509857067
+      twilight-dungeons-structure-tileset_9: -614936947
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
