@@ -115,7 +115,7 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Animation
             }
         }
 
-        private void UpdateDirection(string newDirection)
+        protected void UpdateDirection(string newDirection)
         {
             if (CurrentDirection == newDirection)
             {
@@ -152,7 +152,7 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Animation
             }
         }
 
-        private string DetermineDirectionFromAngle(float angle)
+        protected string DetermineDirectionFromAngle(float angle)
         {
             angle = (angle + 360f) % 360f;
 
@@ -176,6 +176,18 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Animation
             TrySetBool("isSouthEast", isSouthEast);
             TrySetBool("isNorth", isNorth);
             TrySetBool("isNorthWest", isNorthWest);
+        }
+
+        protected void FaceDirection(Vector2 direction)
+        {
+            if (direction.sqrMagnitude <= Mathf.Epsilon)
+            {
+                return;
+            }
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            string newDirection = DetermineDirectionFromAngle(angle);
+            UpdateDirection(newDirection);
         }
 
         private void CacheAnimatorParameters()

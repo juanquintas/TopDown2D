@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "2DTopDown.sln"
+    "dotnet.defaultSolution": "TopDown2D.sln"
 }

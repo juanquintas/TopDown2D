@@ -8,12 +8,13 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Combat
         [SerializeField] private int damage = 1;
         [SerializeField] private float lifetime = 5f;
         [SerializeField] private LayerMask collisionMask = ~0;
+        [SerializeField] private bool orientToDirection = true;
 
-    private Vector2 _direction = Vector2.right;
-    private Rigidbody2D _rb;
-    private Collider2D _collider;
-    private Collider2D _ownerCollider;
-    private bool _initialized;
+        private Vector2 _direction = Vector2.right;
+        private Rigidbody2D _rb;
+        private Collider2D _collider;
+        private Collider2D _ownerCollider;
+        private bool _initialized;
 
         private void Awake()
         {
@@ -81,6 +82,11 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Combat
             {
                 _rb.velocity = _direction * speed;
             }
+
+            if (orientToDirection)
+            {
+                AlignToDirection();
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -95,12 +101,40 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Combat
                 return;
             }
 
-            if (other.TryGetComponent<IDamageable>(out var damageable))
+            if (TryResolveDamageable(other, out var damageable))
             {
                 damageable.TakeDamage(damage);
             }
 
             Dispose();
+        }
+
+        private bool TryResolveDamageable(Collider2D other, out IDamageable damageable)
+        {
+            if (other.TryGetComponent(out damageable))
+            {
+                return true;
+            }
+
+            damageable = other.GetComponentInParent<IDamageable>();
+            if (damageable != null)
+            {
+                return true;
+            }
+
+            damageable = other.GetComponentInChildren<IDamageable>();
+            return damageable != null;
+        }
+
+        private void AlignToDirection()
+        {
+            if (_direction.sqrMagnitude <= Mathf.Epsilon)
+            {
+                return;
+            }
+
+            float angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
         private void Dispose()

@@ -11,6 +11,15 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Animation
 
         private Coroutine _attackResetCoroutine;
 
+        private static readonly Vector2 North = Vector2.up;
+        private static readonly Vector2 South = Vector2.down;
+        private static readonly Vector2 East = Vector2.right;
+        private static readonly Vector2 West = Vector2.left;
+        private static readonly Vector2 NorthEast = new Vector2(1f, 1f).normalized;
+        private static readonly Vector2 NorthWest = new Vector2(-1f, 1f).normalized;
+        private static readonly Vector2 SouthEast = new Vector2(1f, -1f).normalized;
+        private static readonly Vector2 SouthWest = new Vector2(-1f, -1f).normalized;
+
         protected override void Awake()
         {
             base.Awake();
@@ -57,6 +66,28 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Animation
             yield return new WaitForSeconds(attackResetDelay);
             TrySetBool(parameterName, false);
             TrySetBool("isAttackAttacking", false);
+        }
+
+        public Vector2 GetCurrentAimDirection()
+        {
+            string suffix = string.IsNullOrEmpty(CurrentDirectionSuffix) ? "East" : CurrentDirectionSuffix;
+
+            return suffix switch
+            {
+                "North" => North,
+                "South" => South,
+                "West" => West,
+                "NorthEast" => NorthEast,
+                "NorthWest" => NorthWest,
+                "SouthEast" => SouthEast,
+                "SouthWest" => SouthWest,
+                _ => East
+            };
+        }
+
+        public void ForceAimDirection(Vector2 direction)
+        {
+            FaceDirection(direction);
         }
     }
 }

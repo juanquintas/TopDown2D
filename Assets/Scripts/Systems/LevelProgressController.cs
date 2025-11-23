@@ -5,6 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using SmallScaleInc.TopDownPixelCharactersPack1.Combat;
 using SmallScaleInc.TopDownPixelCharactersPack1.Enemies;
+using SmallScaleInc.TopDownPixelCharactersPack1.UI;
+using SmallScaleInc.TopDownPixelCharactersPack1.Feedback;
 
 namespace SmallScaleInc.TopDownPixelCharactersPack1.Systems
 {
@@ -24,6 +26,7 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Systems
         [SerializeField] private UnityEvent onPlayerDeath;
         [SerializeField] private UnityEvent onLevelCompleted;
         [SerializeField] private IntEvent onEnemiesRemainingChanged;
+        [SerializeField] private bool autoCreateHealthSummaryUI = true;
 
         [Header("Scene Flow")]
         [SerializeField] private bool reloadSceneOnPlayerDeath = true;
@@ -58,8 +61,10 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Systems
         {
             RegisterExistingEnemies();
             SubscribeToPlayer();
+            EnsurePlayerFeedback();
             onLevelStarted?.Invoke();
             RaiseEnemiesRemainingEvent();
+            EnsureHealthSummaryUI();
         }
 
         private void OnDisable()
@@ -67,6 +72,36 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Systems
             EnemyBase.EnemySpawned -= HandleEnemySpawned;
             EnemyBase.EnemyDied -= HandleEnemyDied;
             UnsubscribeFromPlayer();
+        }
+
+        private void EnsureHealthSummaryUI()
+        {
+            if (!autoCreateHealthSummaryUI)
+            {
+                return;
+            }
+
+            if (FindObjectOfType<HealthSummaryUI>() != null)
+            {
+                return;
+            }
+
+            var uiObject = new GameObject("HealthSummaryUI");
+            uiObject.transform.SetParent(transform, false);
+            uiObject.AddComponent<HealthSummaryUI>();
+        }
+
+        private void EnsurePlayerFeedback()
+        {
+            if (playerHealth == null)
+            {
+                return;
+            }
+
+            if (playerHealth.GetComponent<HealthFeedback>() == null)
+            {
+                playerHealth.gameObject.AddComponent<HealthFeedback>();
+            }
         }
 
         private void RegisterExistingEnemies()

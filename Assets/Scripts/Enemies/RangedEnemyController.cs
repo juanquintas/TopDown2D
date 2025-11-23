@@ -13,14 +13,12 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Enemies
         [SerializeField] private string fireTrigger = "Shoot";
         [SerializeField] private LayerMask projectileCollisionMask;
 
-        private Animator _animator;
         private Collider2D _collider;
-    private ArcherAnimationController _animationController;
+        private ArcherAnimationController _animationController;
 
         protected override void Awake()
         {
             base.Awake();
-            _animator = GetComponent<Animator>();
             _collider = GetComponent<Collider2D>();
             _animationController = GetComponent<ArcherAnimationController>();
         }
@@ -29,14 +27,33 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Enemies
         {
             base.OnTargetAcquired();
 
-            if (lineOfSightMask.value == 0 && Target != null)
+            if (Target == null)
             {
-                lineOfSightMask = 1 << Target.gameObject.layer;
+                return;
             }
 
-            if (projectileCollisionMask.value == 0 && Target != null)
+            int targetMask = BuildTargetLayerMask();
+            if (targetMask == 0)
             {
-                projectileCollisionMask = 1 << Target.gameObject.layer;
+                return;
+            }
+
+            if (lineOfSightMask.value == 0)
+            {
+                lineOfSightMask = targetMask;
+            }
+            else
+            {
+                lineOfSightMask |= targetMask;
+            }
+
+            if (projectileCollisionMask.value == 0)
+            {
+                projectileCollisionMask = targetMask;
+            }
+            else
+            {
+                projectileCollisionMask |= targetMask;
             }
         }
 
@@ -48,10 +65,31 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Enemies
             }
 
             Vector2 origin = firePoint != null ? (Vector2)firePoint.position : (Vector2)transform.position;
-            Vector2 direction = ((Vector2)Target.position - origin).normalized;
-            origin += direction * 0.1f;
+            Vector2 targetDirection = ((Vector2)Target.position - origin).normalized;
 
-            if (!HasLineOfSight(origin, direction))
+            if (_animationController != null)
+            {
+                _animationController.ForceAimDirection(targetDirection);
+            }
+
+            Vector2 aimDirection = targetDirection;
+            if (_animationController != null)
+            {
+                var animationDirection = _animationController.GetCurrentAimDirection();
+                if (animationDirection.sqrMagnitude > Mathf.Epsilon)
+                {
+                    aimDirection = animationDirection;
+                }
+            }
+
+            if (aimDirection.sqrMagnitude < Mathf.Epsilon)
+            {
+                aimDirection = targetDirection;
+            }
+
+            origin += aimDirection * 0.1f;
+
+            if (!HasLineOfSight(origin, targetDirection))
             {
                 return false;
             }
@@ -68,15 +106,15 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Enemies
                 projectileInstance.SetOwnerCollider(_collider);
             }
 
-            projectileInstance.Initialize(direction, projectileSpeed);
+            projectileInstance.Initialize(aimDirection, projectileSpeed);
 
-            if (_animator != null && !string.IsNullOrEmpty(fireTrigger))
+            if (CachedAnimator != null && !string.IsNullOrEmpty(fireTrigger))
             {
-                foreach (var parameter in _animator.parameters)
+                foreach (var parameter in CachedAnimator.parameters)
                 {
                     if (parameter.type == AnimatorControllerParameterType.Trigger && parameter.name == fireTrigger)
                     {
-                        _animator.SetTrigger(fireTrigger);
+                        CachedAnimator.SetTrigger(fireTrigger);
                         break;
                     }
                 }
@@ -111,7 +149,7 @@ namespace SmallScaleInc.TopDownPixelCharactersPack1.Enemies
                 return hit.collider.transform == Target;
             }
 
-            return true;
+            return false;
         }
 
         protected override void OnDrawGizmosSelected()
